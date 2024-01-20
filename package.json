@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www & npm run rsass",
-    "rsass": "sass --watch ./src/stylesheets/style.sass ./public/stylesheets/style.css"
+    "start": "DEBUG=non-conformance-crud:* node ./bin/www",
+    "dev": "DEBUG=non-conformance-crud:* nodemon ./bin/www & npm run rsass",
+    "rsass": "sass --watch src/stylesheets/style.sass public/stylesheets/style.css"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

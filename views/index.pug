@@ -1,10 +1,8 @@
 extends layout
 
 block content
-  nav.nav-bar 
-    ul.nav-list 
-      li.nav-item Home 
-      li.nav-item Collections 
-      li.nav-item Add 
-  h1= title
-  p Welcome to #{title}
+  .content
+    .hero
+      h1 Welcome to NC-Track
+      p You can track collections, view non-conformance status, and update product records from here
+      a(href="/add") Get started 

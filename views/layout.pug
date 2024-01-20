@@ -2,6 +2,37 @@ doctype html
 html
   head
     title NC-Track
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    link(rel='stylesheet' href='/stylesheets/style.css')
+  body 
+    .root 
+      nav.nav-bar 
+        ul.nav-list 
+          li.nav-item 
+            a(href="/") Home 
+          li.nav-item 
+            a(href="/collections") Collections 
+          li.nav-item 
+            a(href="/add") Add 
+      block content
+
+      footer
+        .foot-bar
+          ul.foot-list
+            a(href="")
+              li.foot-item About Us
+            a(href="")
+              li.foot-item Contact
+            a(href="")
+              li.foot-item Terms of Service
+            a(href="")
+              li.foot-item Privacy Policy
+          ul.foot-list
+            a(href="")
+              li.foot-item Careers
+            a(href="")
+              li.foot-item FAQs
+            a(href="")
+              li.foot-item Support
+            a(href="")
+              li.foot-item Partnerships
+
