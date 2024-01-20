@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www & rsass",
-    "rsass": "sass ./src/stylesheets/style.scss ./public/stylesheets/style.css"
+    "dev": "nodemon ./bin/www & npm run rsass",
+    "rsass": "sass --watch ./src/stylesheets/style.sass ./public/stylesheets/style.css"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
