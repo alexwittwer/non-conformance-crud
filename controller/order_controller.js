@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const { body, validationResult } = require("express-validator");
+const Orders = require("../model/order");
 
 exports.order_create_get = asyncHandler(async (req, res, next) => {
   res.render("order_form");
@@ -30,5 +31,7 @@ exports.order_detail = asyncHandler(async (req, res, next) => {
 });
 
 exports.order_list = asyncHandler(async (req, res, next) => {
-  res.render("order_list");
+  const allOrders = await Orders.find().exec();
+
+  res.render("order_list", { orders: allOrders });
 });

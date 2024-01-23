@@ -1,4 +1,11 @@
 extends layout
 
 block content
-    .content TO BE ADDED
+    .content
+        if (inventory.length > 0)
+            each item in inventory 
+                p= item.name
+        else 
+            h1 Nothing in stock.
+
+        a(href="/inventory/create") Add product to inventory

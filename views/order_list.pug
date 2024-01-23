@@ -1,4 +1,11 @@
 extends layout
 
 block content
-    .content TO BE ADDED
+    .content
+        if (orders.length > 0)
+            each item in orders 
+                p= item.name
+        else 
+            h1 No orders yet.
+
+        a(href="/orders/create") Create an Order
