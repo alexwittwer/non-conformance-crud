@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .content 
+        h1 Tesira Servers
+        .product-page 
+            if product_list.length
+                each product in product_list
+                    a.product-link(href=product.url) 
+                        .product-card 
+                            h1.product-name #{product.name}
+                            p.product-desc Channels: #{product.channels}
+            else
+                p There are no products.

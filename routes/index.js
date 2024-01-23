@@ -6,7 +6,7 @@ router.get("/", function (req, res, next) {
   res.render("index");
 });
 
-router.get("/add", (req, res, next) => {
+router.get("/start", (req, res, next) => {
   res.render("add_landing");
 });
 

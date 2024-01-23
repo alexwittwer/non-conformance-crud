@@ -6,7 +6,9 @@ const logger = require("morgan");
 require("dotenv").config();
 
 const indexRouter = require("./routes/index");
-const collectionsRouter = require("./routes/collections");
+const productsRouter = require("./routes/products");
+const ordersRouter = require("./routes/orders");
+const productInstanceRouter = require("./routes/productinstances");
 
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
@@ -41,7 +43,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/collections", collectionsRouter);
+app.use("/", ordersRouter);
+app.use("/", productsRouter);
+app.use("/", productInstanceRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -1,7 +1,7 @@
 body {
   padding: 0px;
   margin: 0px;
-  background-color: #111;
+  background-color: #242424;
   color: #fff;
   font: 18px "Noto Sans", sans-serif;
   line-height: 1.4;
@@ -49,15 +49,15 @@ body {
   padding: 14px;
   font-size: 14px;
   display: flex;
-  justify-content: flex-end;
+  gap: 50px;
+  justify-content: center;
 }
 .foot-bar .foot-list {
   padding: 0px;
   margin: 0px;
   gap: 4px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
   list-style: none;
 }
 .foot-bar .foot-list a {
@@ -73,6 +73,42 @@ body {
 .content {
   display: grid;
   place-items: center;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='762' preserveAspectRatio='none' viewBox='0 0 1920 762'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1239%26quot%3b)' fill='none'%3e%3crect width='1920' height='762' x='0' y='0' fill='rgba(9%2c 22%2c 36%2c 1)'%3e%3c/rect%3e%3cpath d='M25 762L787 0L995.5 0L233.5 762z' fill='url(%26quot%3b%23SvgjsLinearGradient1240%26quot%3b)'%3e%3c/path%3e%3cpath d='M504.40000000000003 762L1266.4 0L1681.9 0L919.9000000000001 762z' fill='url(%26quot%3b%23SvgjsLinearGradient1240%26quot%3b)'%3e%3c/path%3e%3cpath d='M896.8000000000001 762L1658.8000000000002 0L1780.3000000000002 0L1018.3000000000001 762z' fill='url(%26quot%3b%23SvgjsLinearGradient1240%26quot%3b)'%3e%3c/path%3e%3cpath d='M1891 762L1129 0L809.5 0L1571.5 762z' fill='url(%26quot%3b%23SvgjsLinearGradient1241%26quot%3b)'%3e%3c/path%3e%3cpath d='M1480.6 762L718.5999999999999 0L492.0999999999999 0L1254.1 762z' fill='url(%26quot%3b%23SvgjsLinearGradient1241%26quot%3b)'%3e%3c/path%3e%3cpath d='M1060.1999999999998 762L298.1999999999998 0L67.19999999999982 0L829.1999999999998 762z' fill='url(%26quot%3b%23SvgjsLinearGradient1241%26quot%3b)'%3e%3c/path%3e%3cpath d='M1359.9564636159403 762L1920 201.95646361594038L1920 762z' fill='url(%26quot%3b%23SvgjsLinearGradient1240%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 762L560.0435363840596 762L 0 201.95646361594038z' fill='url(%26quot%3b%23SvgjsLinearGradient1241%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1239'%3e%3crect width='1920' height='762' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1240'%3e%3cstop stop-color='rgba(185%2c 15%2c 15%2c 0.57)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(185%2c 15%2c 15%2c 0.57)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1241'%3e%3cstop stop-color='rgba(185%2c 15%2c 15%2c 0.57)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(185%2c 15%2c 15%2c 0.57)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100%;
+}
+.content .product-page {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-inline: 10%;
+  padding: 24px;
+  gap: 8px;
+  overflow-y: auto;
+}
+.content .product-page a {
+  text-decoration: none;
+  color: #242424;
+}
+.content .product-page .product-card {
+  background-color: #fffff0;
+  color: #242424;
+  padding: 8px;
+}
+.content .product-page .product-card .product-name {
+  font-size: 18px;
+}
+.content .product-page .product-card .product-desc {
+  font-size: 16px;
+  max-width: 60ch;
+}
+.content .detail-card {
+  background-color: #242424;
+  color: #fffff0;
+  max-width: 70ch;
+  padding: 12px;
 }
 .content .hero {
   display: flex;
@@ -86,6 +122,7 @@ body {
 }
 .content .hero .sub-hero {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -93,6 +130,7 @@ body {
   max-width: 60ch;
 }
 .content .hero .sub-hero a {
+  display: block;
   font-size: 24px;
   padding: 16px;
   border-radius: 8px;
@@ -102,6 +140,29 @@ body {
   transition: 250ms;
 }
 .content .hero .sub-hero a:hover {
+  background-color: #345aa0;
+  color: #fff;
+}
+.content .add-nav .add-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.content .add-nav .add-list .add-link {
+  list-style: none;
+}
+.content .add-nav .add-list .add-link a {
+  display: block;
+  font-size: 32px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #111;
+  text-decoration: none;
+  transition: 250ms;
+}
+.content .add-nav .add-list .add-link a:hover {
   background-color: #345aa0;
   color: #fff;
 }
