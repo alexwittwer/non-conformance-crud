@@ -1,4 +1,13 @@
 extends layout
 
 block content
-    .content TO BE ADDED
+    .content
+        .detail-card
+            h1 #{order.name} 
+            p  #{order.description}
+            p Start Date:  #{order.startDateFormatted}
+            p Contract Date: #{order.endDateFormatted}
+
+            .control
+                a(href=`/orders/${order._id}/update`) Update order
+                a(href=`/orders/${order._id}/delete`) Delete order

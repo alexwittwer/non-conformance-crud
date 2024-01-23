@@ -2,4 +2,33 @@ extends layout
 
 block content
     .content
-        h1 Not yet implemented
+        form(method='POST').add-form
+            div.form-group
+                label(for='name') Company Name:
+                input#name.form-control(type='text' placeholder='Company name...' 
+                name='name' 
+                required value=(undefined===order ? '' : order.name) )  
+
+            div.form-group
+                label(for='description') Special Handling:
+                textarea#description.form-control(type='text' 
+                placeholder='Additional comments' 
+                rows='6'
+                cols='20'
+                name='description' 
+                ) #{undefined===order ? '' : order.description}
+            div.form-group
+                label(for='startDate') Start Date:
+                input#startDate.form-control(type='date' name='startDate' 
+                required
+                value=(undefined===order ? today : order.startDate_ISO) )
+            div.form-group
+                label(for='endDate') Contract Date:
+                input#endDate.form-control(type='date' name='endDate' 
+                required
+                value=(undefined===order ? '' : order.endDate_ISO) )
+            button.btn.btn-primary(type='submit') Submit
+    if errors
+        ul
+            for error in errors
+                li!= error.msg

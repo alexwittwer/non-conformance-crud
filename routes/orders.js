@@ -2,7 +2,7 @@ const express = require("express");
 const order_controller = require("../controller/order_controller");
 const router = express.Router();
 
-// order ROUTES //
+// ORDER ROUTES //
 
 router.get("/orders/create", order_controller.order_create_get);
 

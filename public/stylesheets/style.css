@@ -87,6 +87,43 @@ body {
 .content h1 {
   text-align: center;
 }
+.content .link-button {
+  margin-top: 18px;
+  display: block;
+  font-size: 32px;
+  padding: 16px;
+  background-color: #333;
+  color: #fffff0;
+  text-decoration: none;
+  transition: 250ms;
+  border-bottom: 5px solid transparent;
+}
+.content .link-button:hover {
+  border-bottom: 5px solid #c24c07;
+}
+.content .order-list {
+  background-color: #242424;
+  color: #fffff0;
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+  padding: 18px;
+  gap: 8px;
+}
+.content .order-list a {
+  text-decoration: none;
+  color: #fffff0;
+  transition: 250ms;
+}
+.content .order-list a:hover {
+  text-decoration-line: underline;
+}
+.content .order-list .order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
 .content .product-page {
   display: grid;
   grid-template-rows: 1fr;
@@ -117,6 +154,46 @@ body {
   color: #fffff0;
   max-width: 70ch;
   padding: 12px;
+}
+.content .detail-card .control {
+  display: flex;
+  font-size: 24px;
+  gap: 24px;
+  list-style: none;
+}
+.content .detail-card .control a {
+  cursor: pointer;
+  margin-top: 18px;
+  background-color: #333;
+  font-size: 24px;
+  color: #fffff0;
+  border-style: none;
+  text-decoration: none;
+  max-width: fit-content;
+  padding: 20px;
+  transition: 250ms;
+  border-bottom: 5px solid transparent;
+}
+.content .detail-card .control a:hover {
+  border-bottom: 5px solid #c24c07;
+}
+.content .detail-card form {
+  padding: 0px;
+}
+.content .detail-card form button {
+  cursor: pointer;
+  margin-top: 18px;
+  background-color: #333;
+  font-size: 24px;
+  color: #fffff0;
+  border-style: none;
+  max-width: fit-content;
+  padding: 20px !important;
+  transition: 250ms;
+  border-bottom: 5px solid transparent;
+}
+.content .detail-card form button:hover {
+  border-bottom: 5px solid #c24c07;
 }
 .content .hero {
   display: flex;
@@ -173,6 +250,75 @@ body {
 .content .add-nav .add-list .add-link a:hover {
   background-color: #345aa0;
   color: #fff;
+}
+.content .add-form {
+  font-size: 24px;
+  padding: 30px;
+  background-color: #242424;
+  display: flex;
+  flex-direction: column;
+  min-width: 30%;
+  align-items: center;
+  gap: 20px;
+}
+.content .add-form .form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+.content .add-form .form-group input {
+  background-color: #242424;
+  border-style: none;
+  border-bottom: 4px solid #fffff0;
+  color: #fffff0;
+  padding: 20px;
+  font-size: 24px;
+}
+.content .add-form .form-group input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  margin: 0px;
+  margin-right: 5px !important;
+}
+.content .add-form .form-group textarea {
+  resize: none;
+  background-color: #242424;
+  border-style: none;
+  border-bottom: 4px solid #fffff0;
+  color: #fffff0;
+  padding: 20px;
+  font-size: 24px;
+}
+.content .add-form button {
+  cursor: pointer;
+  margin-top: 18px;
+  background-color: #333;
+  font-size: 24px;
+  color: #fffff0;
+  border-style: none;
+  max-width: fit-content;
+  padding: 20px;
+  transition: 250ms;
+  border-bottom: 5px solid transparent;
+}
+.content .add-form button:hover {
+  border-bottom: 5px solid #c24c07;
+}
+.content .del-form button {
+  cursor: pointer;
+  margin-top: 18px;
+  background-color: #333;
+  font-size: 24px;
+  color: #fffff0;
+  border-style: none;
+  max-width: fit-content;
+  padding: 20px;
+  transition: 250ms;
+  border-bottom: 5px solid transparent;
+}
+.content .del-form button:hover {
+  border-bottom: 5px solid #c24c07;
 }
 
 /*# sourceMappingURL=style.css.map */
