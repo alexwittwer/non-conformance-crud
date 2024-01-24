@@ -13,7 +13,7 @@ input {
 
 .styled-button {
   cursor: pointer;
-  margin-top: 18px;
+  margin-block: 20px;
   background-color: #333;
   font-size: 24px;
   color: #fffff0;
@@ -28,7 +28,7 @@ input {
 }
 
 .styled-link-button {
-  margin-top: 18px;
+  margin-block: 20px;
   display: block;
   font-size: 32px;
   padding: 16px;
@@ -171,19 +171,21 @@ body {
 .content .product-page {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   margin-inline: 10%;
   padding: 24px;
-  gap: 8px;
+  gap: 12px;
   overflow-y: auto;
 }
 .content .product-page a {
   text-decoration: none;
   color: #242424;
+  margin-block: 12px;
 }
 .content .product-page .product-card {
   background-color: #fffff0;
   color: #242424;
+  min-height: 100%;
   padding: 8px;
 }
 .content .product-page .product-card .product-name {
@@ -297,7 +299,7 @@ body {
   color: #fff;
 }
 .content .add-form {
-  font-size: 24px;
+  font-size: 18px;
   padding: 30px;
   background-color: #242424;
   display: flex;
@@ -318,8 +320,7 @@ body {
   border-style: none;
   border-bottom: 4px solid #fffff0;
   color: #fffff0;
-  padding: 20px;
-  font-size: 24px;
+  padding: 10px;
 }
 .content .add-form .form-group input[type=date]::-webkit-calendar-picker-indicator {
   filter: invert(1);
@@ -332,8 +333,7 @@ body {
   border-style: none;
   border-bottom: 4px solid #fffff0;
   color: #fffff0;
-  padding: 20px;
-  font-size: 24px;
+  padding: 10px;
 }
 .content .add-form button {
   cursor: pointer;

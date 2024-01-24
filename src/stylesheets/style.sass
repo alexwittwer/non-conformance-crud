@@ -11,7 +11,7 @@ input
 
 .styled-button
   cursor: pointer
-  margin-top: 18px
+  margin-block: 20px
   background-color: #333
   font-size: 24px
   color: $p1
@@ -24,7 +24,7 @@ input
     border-bottom: 5px solid #c24c07
 
 .styled-link-button
-  margin-top: 18px
+  margin-block: 20px
   display: block
   font-size: 32px
   padding: 16px
@@ -145,17 +145,19 @@ body
   .product-page
     display: grid
     grid-template-rows: 1fr
-    grid-template-columns: 1fr 1fr 1fr
+    grid-template-columns: repeat(5, 1fr)
     margin-inline: 10%
     padding: 24px
-    gap: 8px
+    gap: 12px
     overflow-y: auto
     a
       text-decoration: none
       color: $p2
+      margin-block: 12px
     .product-card
       background-color: $p1
       color: $p2
+      min-height: 100%
       padding: 8px
       .product-name
         font-size: 18px
@@ -251,7 +253,7 @@ body
             background-color: #345aa0
             color: #fff
   .add-form
-    font-size: 24px
+    font-size: 18px
     padding: 30px
     background-color: $p2
     display: flex
@@ -270,8 +272,7 @@ body
         border-style: none
         border-bottom: 4px solid $p1
         color: $p1
-        padding: 20px
-        font-size: 24px
+        padding: 10px
       input[type="date"]::-webkit-calendar-picker-indicator
         filter: invert(1)
         margin: 0px
@@ -282,8 +283,7 @@ body
         border-style: none
         border-bottom: 4px solid $p1
         color: $p1
-        padding: 20px
-        font-size: 24px
+        padding: 10px
     button
       cursor: pointer
       margin-top: 18px
