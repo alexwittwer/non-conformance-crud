@@ -18,6 +18,8 @@ exports.product_create_get = asyncHandler(async (req, res, next) => {
 exports.product_create_post = [
   body("name").trim().isLength({ min: 1 }).escape(),
   body("description").trim().escape(),
+  body("model").trim().escape(),
+  body("processingType").trim().escape(),
   body("startDate").isISO8601().toDate(),
   body("endDate").isISO8601().toDate(),
 
