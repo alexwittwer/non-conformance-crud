@@ -242,6 +242,19 @@ body {
 .content .detail-card form button:hover {
   border-bottom: 5px solid #c24c07;
 }
+.content .inventory-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 75%;
+}
+.content .inventory-list .inventory-line {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+}
 .content .hero {
   display: flex;
   flex-direction: column;

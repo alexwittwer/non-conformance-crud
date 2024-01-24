@@ -20,4 +20,8 @@ const ProductInstanceSchema = new Schema({
   },
 });
 
+ProductInstanceSchema.virtual("url").get(function () {
+  return `/inventory/${this._id}`;
+});
+
 module.exports = mongoose.model("ProductInstance", ProductInstanceSchema);

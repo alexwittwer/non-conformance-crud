@@ -5,8 +5,8 @@ block content
         if (orders.length > 0)
             section.order-list 
                 each order in orders 
-                    .order-item
-                        a(href=order.url) #{order.name} 
+                    a(href=order.url).order-item
+                        p #{order.name} 
                         p Due: #{order.endDateFormatted}
         else 
             h1 No orders yet.

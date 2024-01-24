@@ -12,7 +12,7 @@ block content
                 list=`product`
                 type='text' 
                 placeholder='Product name'
-                name='name' 
+                name='product' 
                 required 
                 value=(undefined===productinstance 
                     ? '' 
@@ -36,9 +36,9 @@ block content
                 required 
                 value=(undefined===productinstance 
                     ? '' 
-                    : productinstance.processingType) )
+                    : productinstance.location) )
             div.form-group
-                label(for='location') Status:
+                label(for='status') Status:
                 datalist(id = "status")
                     option(value="In Stock") 
                     option(value="Repair") 

@@ -1,4 +1,9 @@
 extends layout
 
 block content
-    .content TO BE ADDED
+    .content 
+        h1 This action will delete the associated inventory item 
+        | Are you sure you wish to continue?
+
+        form(method="POST").del-form
+            button Delete inventory

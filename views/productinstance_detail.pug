@@ -1,4 +1,12 @@
 extends layout
 
 block content
-    .content TO BE ADDED
+    .content 
+        .detail-card
+            h1 #{productinstance.product} 
+            p  #{productinstance.serialNumber}
+            p  #{productinstance.location}
+            p  #{productinstance.status}
+            .control
+                a(href=`/inventory/${productinstance._id}/update`).styled-link-button Update inventory 
+                a(href=`/inventory/${productinstance._id}/delete`).styled-link-button Delete inventory 

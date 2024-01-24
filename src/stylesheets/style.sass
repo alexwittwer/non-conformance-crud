@@ -141,7 +141,6 @@ body
       justify-content: space-between
       align-items: center
       font-size: 24px
-
   .product-page
     display: grid
     grid-template-rows: 1fr
@@ -204,7 +203,17 @@ body
         border-bottom: 5px solid transparent
         &:hover
           border-bottom: 5px solid #c24c07
-
+  .inventory-list
+    display: flex
+    flex-direction: column
+    min-width: 75%
+    .inventory-line
+      background-color: #333
+      display: flex
+      justify-content: space-between
+      padding: 8px
+      align-items: center
+      gap: 8px
   .hero
     display: flex
     flex-direction: column

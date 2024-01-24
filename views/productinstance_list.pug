@@ -2,9 +2,14 @@ extends layout
 
 block content
     .content
-        if (inventory.length > 0)
-            each item in inventory 
-                p= item.name
+        if (inventory.length)
+            .inventory-list
+                each item in inventory 
+                    a(href=item.url).inventory-line
+                        p= item.product 
+                        p= item.serialNumber
+                        p= item.location
+                        p= item.status
         else 
             h1 Nothing in stock.
 
