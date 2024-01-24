@@ -1,7 +1,15 @@
 $p1: #fffff0
 $p2: #242424
 
-@mixin button
+a
+  text-decoration: none
+  color: $p1
+li
+  list-style: none
+input
+  text-align: right
+
+.styled-button
   cursor: pointer
   margin-top: 18px
   background-color: #333
@@ -9,7 +17,20 @@ $p2: #242424
   color: $p1
   border-style: none
   max-width: fit-content
-  padding: 20px !important
+  padding: 20px
+  transition: 250ms
+  border-bottom: 5px solid transparent
+  &:hover
+    border-bottom: 5px solid #c24c07
+
+.styled-link-button
+  margin-top: 18px
+  display: block
+  font-size: 32px
+  padding: 16px
+  background-color: #333
+  color: $p1
+  text-decoration: none
   transition: 250ms
   border-bottom: 5px solid transparent
   &:hover
@@ -148,6 +169,7 @@ body
     padding: 12px
     .control
       display: flex
+      justify-content: space-evenly
       font-size: 24px
       gap: 24px
       list-style: none
@@ -168,7 +190,18 @@ body
     form
       padding: 0px
       button
-        @include button
+        cursor: pointer
+        margin-top: 18px
+        background-color: #333
+        font-size: 24px
+        color: $p1
+        border-style: none
+        max-width: fit-content
+        padding: 20px
+        transition: 250ms
+        border-bottom: 5px solid transparent
+        &:hover
+          border-bottom: 5px solid #c24c07
 
   .hero
     display: flex

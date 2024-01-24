@@ -1,3 +1,47 @@
+a {
+  text-decoration: none;
+  color: #fffff0;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  text-align: right;
+}
+
+.styled-button {
+  cursor: pointer;
+  margin-top: 18px;
+  background-color: #333;
+  font-size: 24px;
+  color: #fffff0;
+  border-style: none;
+  max-width: fit-content;
+  padding: 20px;
+  transition: 250ms;
+  border-bottom: 5px solid transparent;
+}
+.styled-button:hover {
+  border-bottom: 5px solid #c24c07;
+}
+
+.styled-link-button {
+  margin-top: 18px;
+  display: block;
+  font-size: 32px;
+  padding: 16px;
+  background-color: #333;
+  color: #fffff0;
+  text-decoration: none;
+  transition: 250ms;
+  border-bottom: 5px solid transparent;
+}
+.styled-link-button:hover {
+  border-bottom: 5px solid #c24c07;
+}
+
 body {
   padding: 0px;
   margin: 0px;
@@ -157,6 +201,7 @@ body {
 }
 .content .detail-card .control {
   display: flex;
+  justify-content: space-evenly;
   font-size: 24px;
   gap: 24px;
   list-style: none;
@@ -188,7 +233,7 @@ body {
   color: #fffff0;
   border-style: none;
   max-width: fit-content;
-  padding: 20px !important;
+  padding: 20px;
   transition: 250ms;
   border-bottom: 5px solid transparent;
 }

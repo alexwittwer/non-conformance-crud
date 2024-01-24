@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const { DateTime } = require("luxon");
 
 const ProductSchema = new Schema({
   name: {
@@ -17,18 +18,6 @@ const ProductSchema = new Schema({
     enum: ["DSP", "Analog", "Hybrid"],
     default: "DSP",
   },
-  inputs: [
-    {
-      type: String,
-      required: true,
-    },
-  ],
-  outputs: [
-    {
-      type: String,
-      required: true,
-    },
-  ],
   price: {
     type: Number,
     required: true,
@@ -40,6 +29,10 @@ const ProductSchema = new Schema({
 ProductSchema.virtual("url").get(function () {
   // We don't use an arrow function as we'll need the this object
   return `/products/${this._id}`;
+});
+
+ProductSchema.virtual("releaseDate_ISO").get(function () {
+  return DateTime.fromJSDate(this.releaseDate).toISODate();
 });
 
 module.exports = mongoose.model("Product", ProductSchema);

@@ -6,3 +6,6 @@ block content
             h1 #{product.name} 
             p  #{product.description}
             p  Price: #{product.price}
+            .control
+                a(href=`/products/${product._id}/update`).styled-link-button Update product 
+                a(href=`/products/${product._id}/delete`).styled-link-button Delete product 
