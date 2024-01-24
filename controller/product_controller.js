@@ -67,9 +67,39 @@ exports.product_update_get = asyncHandler(async (req, res, next) => {
   res.render("product_form", { product: product });
 });
 
-exports.product_update_post = asyncHandler(async (req, res, next) => {
-  res.render("NOT IMPLEMENTED: Product create GET");
-});
+exports.product_update_post = [
+  body("name").trim().isLength({ min: 1 }).escape(),
+  body("description").escape(),
+  body("model").escape(),
+  body("processingType").trim().escape(),
+  body("releaseDate").isISO8601().toDate(),
+
+  asyncHandler(async (req, res, next) => {
+    const errors = validationResult(req);
+
+    const updateProduct = new Product({
+      name: req.body.name,
+      model: req.body.model,
+      description: req.body.description,
+      channels: req.body.channels,
+      processingType: req.body.processingType,
+      price: req.body.price,
+      releaseDate: req.body.releaseDate,
+      _id: req.params.id,
+    });
+
+    if (!errors.isEmpty()) {
+      res.render("product_form", {
+        product: updateProduct,
+        errors: errors.array(),
+      });
+      return;
+    } else {
+      await Product.findByIdAndUpdate(req.params.id, updateProduct);
+      res.redirect("/products");
+    }
+  }),
+];
 
 exports.product_detail = asyncHandler(async (req, res, next) => {
   const product = await Product.findById(req.params.id).populate().exec();

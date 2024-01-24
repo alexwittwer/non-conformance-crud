@@ -10,6 +10,7 @@ block content
                         .product-card 
                             h1.product-name #{product.name}
                             p.product-desc Channels: #{product.channels}
+                            p.product-desc Type: #{product.processingType}
             else
                 p There are no products.
         a.styled-link-button(href="/products/create") Add new product  
