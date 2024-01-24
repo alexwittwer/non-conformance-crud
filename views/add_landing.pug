@@ -3,10 +3,12 @@ extends layout
 block content
     .content 
         .add-nav 
-            ul.add-list 
-                li
-                    a(href="/orders").styled-link-button Orders 
-                li
-                    a(href="/products").styled-link-button Products 
-                li
-                    a(href="/inventory").styled-link-button Inventory
+            a(href="/orders").add-card
+                h2 Orders 
+                p View, change, or delete orders
+            a(href="/products").add-card
+                h2 Products 
+                p View current products, change their details, or remove product lines
+            a(href="/inventory").add-card
+                h2 Inventory 
+                p Check current inventory status, add individual items and delete stock

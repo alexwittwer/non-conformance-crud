@@ -5,7 +5,7 @@
   "scripts": {
     "start": "DEBUG=non-conformance-crud:* node ./bin/www",
     "dev": "DEBUG=non-conformance-crud:* nodemon ./bin/www & npm run rsass",
-    "rsass": "sass --watch src/stylesheets/style.sass public/stylesheets/style.css"
+    "rsass": "sass --watch src/stylesheets/style.scss public/stylesheets/style.css"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

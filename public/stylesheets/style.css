@@ -288,6 +288,26 @@ body {
   background-color: #345aa0;
   color: #fff;
 }
+.content .add-nav {
+  display: flex;
+  font-size: 24px;
+  flex-direction: column;
+  gap: 8px;
+}
+.content .add-nav .add-card {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fffff0;
+  padding: 12px;
+  max-width: 30ch;
+  gap: 20px;
+}
+.content .add-nav .add-card h2 {
+  padding: 0px;
+  margin: 0px;
+}
 .content .add-nav .add-list {
   display: flex;
   justify-content: center;
