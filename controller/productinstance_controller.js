@@ -4,7 +4,9 @@ const ProductInstance = require("../model/productinstance");
 const Product = require("../model/product");
 
 exports.productinstance_detail = asyncHandler(async (req, res, next) => {
-  res.render("productinstance_detail");
+  const productInstance = await Product instance.findByID(req.params.id).exec;
+
+  res.render("productinstance_detail", {product: productInstance);
 });
 
 exports.productinstance_list = asyncHandler(async (req, res, next) => {
