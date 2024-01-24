@@ -1,6 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const { body, validationResult } = require("express-validator");
 const ProductInstance = require("../model/productinstance");
+const Product = require("../model/product");
 
 exports.productinstance_detail = asyncHandler(async (req, res, next) => {
   res.render("productinstance_detail");
@@ -13,7 +14,9 @@ exports.productinstance_list = asyncHandler(async (req, res, next) => {
 });
 
 exports.productinstance_create_get = asyncHandler(async (req, res, next) => {
-  res.render("productinstance_form");
+  const allProducts = await Product.find({}, "name").exec();
+
+  res.render("productinstance_form", { product_list: allProducts });
 });
 
 exports.productinstance_create_post = asyncHandler(async (req, res, next) => {

@@ -2,4 +2,58 @@ extends layout
 
 block content
     .content
-        h1 Not implemented yet
+        form(method='POST').add-form
+            div.form-group
+                label(for='product') Product:
+                datalist(id='product')
+                    each product in product_list 
+                        option(value=product.name)
+                input#product.form-control(
+                list=`product`
+                type='text' 
+                placeholder='Product name'
+                name='name' 
+                required 
+                value=(undefined===productinstance 
+                    ? '' 
+                    : productinstance.product) )  
+            div.form-group
+                label(for='serialNumber') Serial Number:
+                input#serialNumber.form-control(
+                type='text' 
+                placeholder='DSP-18401' 
+                name='serialNumber' 
+                required 
+                value=(undefined===productinstance 
+                    ? '' 
+                    : productinstance.serialNumber) ) 
+            div.form-group
+                label(for='location') Location:
+                input#name.form-control(
+                list='location' 
+                placeholder='Tigard' 
+                name='location' 
+                required 
+                value=(undefined===productinstance 
+                    ? '' 
+                    : productinstance.processingType) )
+            div.form-group
+                label(for='location') Status:
+                datalist(id = "status")
+                    option(value="In Stock") 
+                    option(value="Repair") 
+                    option(value="Awaiting Material")
+                input#name.form-control(
+                list='status' 
+                placeholder='In Stock' 
+                name='status' 
+                required 
+                value=(undefined===productinstance 
+                    ? '' 
+                    : productinstance.status) )
+            button.btn.btn-primary(type='submit') Submit
+    if errors
+        ul
+            for error in errors
+                li!= error.msg
+

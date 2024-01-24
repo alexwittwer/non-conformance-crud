@@ -3,8 +3,7 @@ const Schema = mongoose.Schema;
 
 const ProductInstanceSchema = new Schema({
   product: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Product", // Reference to the AudioProcessor model
+    type: String,
     required: true,
   },
   serialNumber: {
@@ -12,15 +11,12 @@ const ProductInstanceSchema = new Schema({
     required: true,
     unique: true,
   },
-  purchaseDate: {
-    type: Date,
-    required: true,
-  },
   location: String,
   status: {
     type: String,
-    enum: ["In Stock", "Back-order", "Out of stock"],
+    enum: ["In Stock", "Repair", "Awaiting Material"],
     default: "In Stock",
+    required: true,
   },
 });
 
