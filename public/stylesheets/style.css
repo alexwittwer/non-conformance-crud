@@ -38,6 +38,11 @@ input {
   transition: 250ms;
   border-bottom: 5px solid transparent;
 }
+@media screen and (max-width: 599px) {
+  .styled-link-button {
+    font-size: 18px;
+  }
+}
 .styled-link-button:hover {
   border-bottom: 5px solid #c24c07;
 }
@@ -63,6 +68,11 @@ body {
   background-color: #333;
   font-size: 24px;
 }
+@media screen and (max-width: 599px) {
+  .nav-bar {
+    font-size: 16px;
+  }
+}
 .nav-bar .nav-list {
   padding: 0px;
   margin: 0px;
@@ -70,6 +80,11 @@ body {
   gap: 24px;
   justify-content: center;
   list-style: none;
+}
+@media screen and (max-width: 599px) {
+  .nav-bar .nav-list {
+    gap: 6px;
+  }
 }
 .nav-bar .nav-list a {
   text-decoration: none;
@@ -142,6 +157,11 @@ body {
   transition: 250ms;
   border-bottom: 5px solid transparent;
 }
+@media screen and (max-width: 599px) {
+  .content .link-button {
+    font-size: 18px;
+  }
+}
 .content .link-button:hover {
   border-bottom: 5px solid #c24c07;
 }
@@ -153,6 +173,11 @@ body {
   min-width: 50%;
   padding: 18px;
   gap: 8px;
+}
+@media screen and (max-width: 599px) {
+  .content .order-list {
+    min-width: 80%;
+  }
 }
 .content .order-list a {
   text-decoration: none;
@@ -166,7 +191,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 24px;
+  font-size: 18px;
 }
 .content .product-page {
   display: grid;
@@ -176,6 +201,11 @@ body {
   padding: 24px;
   gap: 12px;
   overflow-y: auto;
+}
+@media screen and (max-width: 599px) {
+  .content .product-page {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .content .product-page a {
   text-decoration: none;
@@ -201,28 +231,25 @@ body {
   max-width: 70ch;
   padding: 12px;
 }
+@media screen and (max-width: 599px) {
+  .content .detail-card {
+    padding: 8px;
+    font-size: 16px;
+    margin-inline: 8px;
+  }
+  .content .detail-card h1 {
+    font-size: 20px;
+  }
+  .content .detail-card .control {
+    gap: 4px;
+  }
+}
 .content .detail-card .control {
   display: flex;
   justify-content: space-evenly;
-  font-size: 24px;
+  font-size: 16px;
   gap: 24px;
   list-style: none;
-}
-.content .detail-card .control a {
-  cursor: pointer;
-  margin-top: 18px;
-  background-color: #333;
-  font-size: 24px;
-  color: #fffff0;
-  border-style: none;
-  text-decoration: none;
-  max-width: fit-content;
-  padding: 20px;
-  transition: 250ms;
-  border-bottom: 5px solid transparent;
-}
-.content .detail-card .control a:hover {
-  border-bottom: 5px solid #c24c07;
 }
 .content .detail-card form {
   padding: 0px;
@@ -265,6 +292,11 @@ body {
   grid-row: 1/2;
   grid-column: 1/3;
 }
+@media screen and (max-width: 599px) {
+  .content .hero h1 {
+    font-size: 30px;
+  }
+}
 .content .hero .sub-hero {
   display: flex;
   flex-direction: column;
@@ -273,6 +305,7 @@ body {
 }
 .content .hero .sub-hero p {
   max-width: 60ch;
+  text-align: center;
 }
 .content .hero .sub-hero a {
   display: block;
@@ -291,8 +324,14 @@ body {
 .content .add-nav {
   display: flex;
   font-size: 24px;
-  flex-direction: column;
   gap: 8px;
+}
+@media screen and (max-width: 599px) {
+  .content .add-nav {
+    flex-direction: column;
+    margin-inline: 10px;
+    font-size: 16px;
+  }
 }
 .content .add-nav .add-card {
   display: flex;
@@ -341,6 +380,12 @@ body {
   align-items: center;
   gap: 20px;
 }
+@media screen and (max-width: 599px) {
+  .content .add-form {
+    padding: 8px;
+    font-size: 16px;
+  }
+}
 .content .add-form .form-group {
   display: flex;
   justify-content: space-between;
@@ -379,6 +424,12 @@ body {
   padding: 20px;
   transition: 250ms;
   border-bottom: 5px solid transparent;
+}
+@media screen and (max-width: 599px) {
+  .content .add-form button {
+    font-size: 20px;
+    padding: 8px;
+  }
 }
 .content .add-form button:hover {
   border-bottom: 5px solid #c24c07;
