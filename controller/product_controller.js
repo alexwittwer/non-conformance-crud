@@ -20,8 +20,7 @@ exports.product_create_post = [
   body("description").trim().escape(),
   body("model").trim().escape(),
   body("processingType").trim().escape(),
-  body("startDate").isISO8601().toDate(),
-  body("endDate").isISO8601().toDate(),
+  body("releaseDate").isISO8601().toDate(),
 
   asyncHandler(async (req, res, next) => {
     const errors = validationResult(req);
